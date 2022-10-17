@@ -1,0 +1,35 @@
+<div class="container text-primary">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a href="#table1" (click)="showdata1()">news</a>
+  </div>
+ </nav>
+  
+  <table class="table table-bordered" id="table1" *ngIf="showdata">
+  
+  <tbody *ngFor="let i of a">
+    
+      
+        <tr>
+           <td class="text-center text-primary" colspan="2">{{i.title}}</td>
+        </tr>
+        <tr>
+          <td class="text-center text-danger" colspan="2">{{i.author}}</td>
+        </tr>
+        <tr>
+          <td>{{i.description}}</td>
+          <td><img [src]="i.urlToImage"></td>
+
+        </tr>
+        
+        <tr>
+          <td class="text-center text-success" colspan="2">{{i.publishedAt}}</td>
+        </tr>
+        
+      
+      
+    
+    
+  </tbody>
+</table>
+</div>
